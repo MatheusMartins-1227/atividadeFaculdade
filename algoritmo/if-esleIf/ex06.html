@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Insira seu peso: <input type="text" id="inputPeso">
+  <button onclick="calcularPeso()">
+    Avaliação do peso
+  </button>
+  <div id="divResultado"></div>
+</body>
+</html>
+<script>
+  function calcularPeso(){
+    var peso = inputPeso.value
+
+    if(peso <= 13.5){
+      divResultado.innerHTML = "Abaixo do peso"
+    } else if(peso == 18.3){
+      divResultado.innerHTML = "Peso Perfeito"
+    } else if(peso < 21.2){
+      divResultado.innerHTML = "Peso na média"
+    } else {
+      divResultado.innerHTML = "Acima do peso"
+    }
+  }
+</script>

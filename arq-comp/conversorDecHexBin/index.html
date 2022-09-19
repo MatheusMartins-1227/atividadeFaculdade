@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="titulo">Conversor de Base</h1>
+    <div class="divNumDecimal">
+      <label for="numDecimal" id="labelnumDecimal">Numero decimal:</label>
+      <input type="number" id="numDecimal" class="input"> 
+    </div>
+
+    <div class="converter">
+      <p>Conveter para:</p>
+      <div class="converterOpcoes">
+        <label for="numOctal">Octal</label>
+        <input  type="checkbox" id="numOctal" class="inputCheck">
+        <label for="numHexa">Hexadecimal</label>
+        <input type="checkbox" id="numHexa" class="inputCheck">
+        <label for="numBinario">Binário</label>
+        <input type="checkbox" id="numBinario" class="inputCheck">
+      </div>
+    </div>
+
+    <button class="botao" onclick="converter()">Converter</button>
+
+    <div class="resultado">
+      <p>Resultado:</p>
+      <div id="divResultado" class="divResultado"></div>
+    </div>
+  </div>
+  
+</body>
+</html>
+<script src="script.js"></script>

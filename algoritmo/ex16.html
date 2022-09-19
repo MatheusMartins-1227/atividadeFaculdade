@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="calcular8Passagens()">8 Passagens</button>
+  <button onclick="calcular20Passagens()">20 Passagens</button>
+  <button onclick="calcular50Passagens()">50 Passagens</button>
+  <div id="div_mostrarResultado"></div>
+</body>
+</html>
+<script>
+  function calcular8Passagens(){
+    var desconto = (((32.45 * 100 / 35.20) - 100) * -1).toFixed(2)
+    var passagensGanhas = ((35.2 - 32.45) / 4.4).toFixed(2)
+    div_mostrarResultado.innerHTML = `Ao comprar 8 passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${passagensGanhas} passagens de bônus`
+  }
+
+  function calcular20Passagens(){
+    var desconto = (((78.65 * 100 / 88) - 100) * -1).toFixed(2)
+    var passagensGanhas = ((88 - 78.65) / 4.4).toFixed(2)
+    div_mostrarResultado.innerHTML = `Ao comprar 20 passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${passagensGanhas} passagens de bônus`
+  }
+
+  function calcular50Passagens(){
+    var desconto = (((191.41 * 100 / 220) - 100) * -1).toFixed(2)
+    var passagensGanhas = ((220 - 191.41) / 4.4).toFixed(2)
+    div_mostrarResultado.innerHTML = `Ao comprar 50 passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${passagensGanhas} passagens de bônus`
+  }
+</script>

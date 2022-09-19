@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+    Porções de pão francês: <span id="span_pao">0</span> <br>
+    Porções de carne boniva: <span id="span_carne">0</span> <br>  
+    Porções de carne de soja: <span id="span_soja">0</span> <br>
+    Porções de arroz com feijão: <span id="span_arrozfeijao">0</span> <br>
+    <b>Total de calorias: <span id="span_totalCalorias">0</span></b>   
+  </p>
+
+  <button onclick="comerPao()">Comer Pão Francês</button>
+  <button onclick="comerCarneBovina()">Comer porção de carne bovina</button>
+  <button onclick="comerCarneSoja()">Comer porção de carne soja</button>
+  <button onclick="comerArrozEFeijao()">Comer porção de arroz com feijão</button> <br>
+  <button onclick="recomecar()">Recomeçar</button>
+
+</body>
+</html>
+<script>
+  var pao = 0
+  var carne = 0
+  var soja = 0
+  var arrozfeijao = 0
+  var totalCalorias = 0
+
+
+  function comerPao(){
+    pao += 1
+    totalCalorias += 50
+
+    span_pao.innerHTML = pao
+    span_totalCalorias.innerHTML = totalCalorias
+  }
+
+  function comerCarneBovina(){
+    carne += 1
+    totalCalorias += 100
+    span_carne.innerHTML = carne
+    span_totalCalorias.innerHTML = totalCalorias
+  }
+
+  function comerCarneSoja(){
+    soja += 1
+    totalCalorias += 30
+    span_soja.innerHTML = soja
+    span_totalCalorias.innerHTML = totalCalorias
+  }
+
+  function comerArrozEFeijao(){
+    arrozfeijao += 1
+    totalCalorias += 20
+    span_arrozfeijao.innerHTML = arrozfeijao
+    span_totalCalorias.innerHTML = totalCalorias
+  }
+
+  function recomecar(){
+    pao = 0
+    carne = 0
+    soja = 0
+    arrozfeijao = 0
+    totalCalorias = 0
+
+    span_pao.innerHTML = pao
+    span_carne.innerHTML = carne
+    span_soja.innerHTML = soja
+    span_arrozfeijao.innerHTML = arrozfeijao
+    span_totalCalorias.innerHTML = totalCalorias
+  }
+</script>

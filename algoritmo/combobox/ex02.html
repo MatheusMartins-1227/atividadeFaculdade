@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira sua bebida: <br>
+    <select name="bebida" id="selectBebida">
+        <option value="0">Nenhuma</option>
+        <option value="5">Água</option>
+        <option value="8">Refrigerante</option>
+        <option value="10">Cerveja</option>
+    </select> <br>
+    Insira sua refeição: <br>
+    <select name="refeicao" id="selectRefeicao">
+        <option value="10">Salada</option>
+        <option value="30">Feijoada</option>
+        <option value="35">Bife a Cavalo</option>
+        <option value="25">Peixe Frito</option>
+    </select> <br>
+
+    Insira seu nome: <input type="text" id = "inputNome">
+
+    <button onclick="calcularConta()">
+        Calcular total a pagar
+    </button>
+
+    <div id="divResultado">
+
+    </div>
+</body>
+</html>
+<script>
+    function calcularConta(){
+        var nome = inputNome.value
+        var bebida = Number(selectBebida.value)
+        var refeicao = Number(selectRefeicao.value)
+        var totalConta = bebida + refeicao
+
+
+        divResultado.innerHTML = `Olá, ${nome}. Seu almoço vai custar um total de R$${totalConta}`
+
+    }
+</script>

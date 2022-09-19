@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sabor de pizza: <input type="text" id="input_saborPizza"> <br>
+    Valor da pizza: <input type="text" id="input_valorPizza"> <br>
+    Quantidade de Pessoas que comeram: <input type="text" id="input_qtdPessoas"> <br>
+    <button onclick="calcularMostrar()" id="btn_verValor">Ver valor por amigo</button>
+    <div id="div_mostrarResultado"></div>
+</body>
+</html>
+<script>
+    function calcularMostrar(){
+        var total = (Number(input_valorPizza.value) * 1.1) / Number(input_qtdPessoas.value)
+
+
+        div_mostrarResultado.innerHTML = `
+        Cada amigo vai colaborar com R$${total} para a pizza de ${input_saborPizza.value}.
+        `
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .saldoPositivo{
+        color: blue;
+    }
+
+    .saldoNegativo{
+        color: red;
+    }
+</style>
+<body>
+    Insira o saldo da sua conta: <input type="text" id="inputSaldo"> <br>
+    Insira o valor que deseja retirar <input type="text" id="inputRetirar"> <br>
+    <button onclick="analisarConta()">
+        Analisar conta
+    </button>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    function analisarConta(){
+        var novoSaldo = Number(inputSaldo.value) - Number(inputRetirar.value)
+
+        if(novoSaldo >= 0){
+            divResultado.innerHTML = `<p class="saldoPositivo"><i>O saldo atual da conta corrente é ${(novoSaldo).toFixed(2)}</i></p>`
+        } else {
+            divResultado.innerHTML = `<p class="saldoNegativo"><b>O saldo atual da conta corrente é ${(novoSaldo).toFixed(2)}</b></p>`
+        }
+    }
+</script>

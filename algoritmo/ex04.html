@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Votos do candidato A <input type="text" id="votos_candidatoA"><br>
+    Votos do candidato B <input type="text" id="votos_candidatoB"><br>
+    Votos branco <input type="text" id="votos_brancos"><br>
+    Votos nulos <input type="text" id="votos_nulos"><br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+
+    function resultado(){
+        div_resultado.innerHTML = "<b>Total de votos:</b> <u>" + (Number(votos_candidatoA.value) + Number(votos_candidatoB.value) + Number(votos_brancos.value) + Number(votos_nulos.value)) + "</u><br> <b>Candidato A:</b> " +  (Number(votos_candidatoA.value) / (Number(votos_candidatoA.value) + Number(votos_candidatoB.value) + Number(votos_brancos.value) + Number(votos_nulos.value))) * 100 + "% (" + votos_candidatoA.value + " votos) <br>" + "<b>Candidato B:</b> " + (Number(votos_candidatoB.value) / (Number(votos_candidatoA.value) + Number(votos_candidatoB.value) + Number(votos_brancos.value) + Number(votos_nulos.value))) * 100 + "(" + votos_candidatoB.value + " votos) <br>" + "<b>Inválidos: </b>" + ((Number(votos_brancos.value) + Number(votos_nulos.value)) / (Number(votos_candidatoA.value) + Number(votos_candidatoB.value) + Number(votos_brancos.value) + Number(votos_nulos.value))) * 100 + "% (" + (Number(votos_brancos.value) + Number(votos_nulos.value)) + " votos)"
+    }
+</script>

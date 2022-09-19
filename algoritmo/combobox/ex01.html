@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="mesesAno" id="selectMeses">
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
+    <button onclick="calcularEstacao()">
+        Ver estação
+    </button>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+
+    function calcularEstacao(){
+        var mes = Number(selectMeses.value)
+
+        if(mes == 1){
+          divResultado.innerHTML = "Inverno <br> <img src = 'https://st2.depositphotos.com/1814366/5882/i/450/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg'>"
+        } else if (mes == 2){
+            divResultado.innerHTML = "Inverno <br> <img src = 'https://st2.depositphotos.com/1814366/5882/i/450/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg'>"
+        } else if (mes == 12){
+            divResultado.innerHTML = "Inverno <br> <img src = 'https://st2.depositphotos.com/1814366/5882/i/450/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg'>"
+        } else if (mes < 6){
+            divResultado.innerHTML = "Primavera <br> <img src = 'https://thumbs.dreamstime.com/b/flores-coloridas-da-primavera-no-fundo-amarelo-136127656.jpg'>"
+        } else if (mes < 9){
+            divResultado.innerHTML = "Verão <br> <img src = 'https://thumbs.dreamstime.com/b/praia-tropical-com-areia-fundo-das-f%C3%A9rias-de-ver%C3%A3o-93404396.jpg'>"
+        } else {
+            divResultado.innerHTML = "Outono <br> <img src =https://pt.bcdn.biz/images/emails_source/35633343-7fcd-46ca-9498-be2f37eb3f91.jpg'"
+        }
+       
+    }
+    
+</script>

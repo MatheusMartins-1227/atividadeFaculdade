@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Insira a renda da sua familia mensalmente: <input type="text" id="inputRendaMensal">
+  <button onclick="calcularClasseSocial()">
+    Verificar situação
+  </button>
+</body>
+</html>
+<script>
+  function calcularClasseSocial(){
+    var rendaMensal = Number(inputRendaMensal.value)
+    var classe;
+
+    if(rendaMensal <= 250){
+      classe = "E"
+    } else if (rendaMensal <= 900){
+        classe = "D"
+    } else if (rendaMensal <= 2500){
+        classe = "C"
+    } else if(rendaMensal <= 9500){
+        classe = "B"
+    } else {
+      classe = "A"
+    }
+
+    alert("Classe " + classe)
+
+  }
+</script>

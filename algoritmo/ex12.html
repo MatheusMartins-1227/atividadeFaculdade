@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o primeiro número: <input type="number" id="input_n1"> <br>
+    Insira o segundo número: <input type="number" id="input_n2"> <br>
+    <button onclick="calcularPotencia()">Fazer Potência</button>
+    <div id="div_mostrarResultado"></div>
+</body>
+</html>
+<script>
+    function calcularPotencia(){
+        var total = Number(input_n1.value) ** Number(input_n2.value)
+        div_mostrarResultado.innerHTML = `${input_n1.value} elevado a ${input_n2.value} dá ${total}`
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da pizza? <input type="text" id="input_valor_pizza"> <br>
+    Qual a quantidade de amigos reunidos? <input type="text" id="input_qtd_amigos"> <br>
+    Valor máximo que cada amigo pode pagar: <input type="text" id="inputValorMaximo">
+    <button onclick="calcularPreco()">
+        Rola a pizza?
+    </button>
+    <div id="div_mostrar_resultado"></div>
+</body>
+</html>
+<script>
+    function calcularPreco(){
+        var valorParaCada = Number(input_valor_pizza.value) / Number(input_qtd_amigos.value)
+
+        div_mostrar_resultado.innerHTML = `Cada amigo vai pagar R$${valorParaCada}`
+
+        if(valorParaCada > inputValorMaximo.value){
+            div_mostrar_resultado.innerHTML += `<br> Deu ruim! Pizza muito cara!    `
+        } else {
+            div_mostrar_resultado.innerHTML = `Uhu! Vamos pedir a pizza!`
+        }
+    }
+</script>

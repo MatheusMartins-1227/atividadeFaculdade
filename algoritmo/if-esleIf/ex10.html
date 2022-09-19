@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img{
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="nota1()">
+    Nota 1
+  </button>
+  <button onclick="nota2()">
+    Nota 2
+  </button >
+  <button onclick="nota3()">
+    Nota 3
+  </button>
+  <button onclick="nota4()">
+    Nota 4
+  </button>
+  <button onclick="nota5()">
+    Nota 5
+  </button>
+
+  <div id="divResultado">Sua avaliação: <b id="bAvaliacao"></b></div>
+</body>
+</html>
+<script>
+  var notas = 0
+  var qtdNotas = 0
+  var media = 0
+
+  function nota1(){
+    notas += 1
+    qtdNotas += 1
+    media =  notas / qtdNotas
+    exibirMedia()
+  }
+
+  function nota2(){    
+    notas += 2
+    qtdNotas += 1
+    media =  notas / qtdNotas
+    exibirMedia()
+  }
+
+  function nota3(){
+    notas += 3
+    qtdNotas += 1
+    media =  notas / qtdNotas
+    exibirMedia()
+  }
+
+  function nota4(){
+    notas += 4
+    qtdNotas += 1
+    media =  notas / qtdNotas
+    exibirMedia()
+
+  }
+
+  function nota5(){
+    notas += 5
+    qtdNotas += 1
+    media = notas / qtdNotas
+    exibirMedia()
+  }
+
+  function exibirMedia(){
+    divResultado.innerHTML = "Sua avaliação:"
+    divResultado.innerHTML += `<b>${media.toFixed(1)}</b>`
+
+    if(media < 2){
+      divResultado.innerHTML += "<img src = 'https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg'>"
+    } else if (media < 3){
+      divResultado.innerHTML += "<img src = 'https://st.depositphotos.com/1424188/1365/i/600/depositphotos_13653328-stock-photo-handsome-caucasian-man-blue-eyes.jpg'>"
+    } else if (media < 4.5){
+      divResultado.innerHTML += "<img src = 'https://img.freepik.com/fotos-gratis/foto-isolada-de-linda-mulher-de-sucesso-com-cabelos-cacheados-levanta-os-punhos-cerrados-comemora-o-triunfo-ficando-muito-satisfeita-e-feliz-fecha-os-olhos-de-prazer-veste-camiseta-branca-sim-consegui_273609-27735.jpg'>"
+    } else{
+      divResultado.innerHTML += "<img src = 'https://thumbs.dreamstime.com/b/um-homem-de-neg%C3%B3cios-energ%C3%A9tico-muito-feliz-18738468.jpg'>"
+    }
+  }
+
+</script>

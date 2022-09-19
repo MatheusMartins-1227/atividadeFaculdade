@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas horas você dorme por dia?<input id="input_horas">
+    <button onclick = "calcularSono()">Calcular Sono</button>
+    <div id="resultado" ></div>
+    
+</body>
+</html>
+<script>
+    function calcularSono(){
+        resultado.innerHTML = `
+        Ao durmir <u>${input_horas.value}</u> horas, você dormiu: <br>
+        <u>${Number(input_horas.value) * 0.05}</u> horas na <b>fase 1</b> <br>
+        <u>${Number(input_horas.value) * 0.45}</u> horas na <b>fase 2</b> <br>
+        <u>${Number(input_horas.value) * 0.30}</u> horas na <b>fase 3</b> <br>
+        <u>${Number(input_horas.value) * 0.20}</u> horas na <b>fase REM</b> <br>
+        `
+    }
+</script>

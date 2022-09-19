@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a temperatura do ambiente: <input type="text" id="inputTemperatura">
+    <button onclick="verificarClima()">    
+        Verificar clima
+    </button>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    function verificarClima(){
+        if(inputTemperatura < 10){
+            divResultado.innerHTML = `<img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/88352f06b2fee7cdca32c3e12f5a68a4.jpg" alt="Alimento Saudável">`
+        } else {
+            divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/40/2018/09/13/pao-estragado-1536856097776_v2_300x300.jpg" alt="Alimento Estragado">`
+        }
+    }
+</script>

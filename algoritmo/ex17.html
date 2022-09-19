@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Valor guardado no cofrinho R$<span id="span_valor">0.00</span> </p><br>
+  <p>Quantidade de depósitos feitos: <b id="b_deposito">0</b></p>
+  <p>Quantidade de retiradas feitas: <b id="b_retiradas">0</b></p>
+  <input type="number" id="input_number"> <br>
+  <button onclick="depositar()">Depositar</button>
+  <button onclick="tirarGrana()">Tirar a grana</button>
+</body>
+</html>
+<script>
+  function depositar(){
+    span_valor.innerHTML = input_number.value
+    b_deposito.innerHTML = Number(b_deposito.innerHTML) + 1
+  }
+  function tirarGrana(){
+    span_valor.innerHTML = 0
+    b_retiradas.innerHTML = Number(b_retiradas.innerHTML) + 1
+  }
+</script>

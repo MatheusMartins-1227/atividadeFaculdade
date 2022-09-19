@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Número atual: <span id="span_numero">0</span> <br>
+    <button onclick="contar()">Contar</button>
+</body>
+</html>
+<script>
+    function contar(){
+        var numero = Number(span_numero.innerHTML) + 1 
+        span_numero.innerHTML = numero
+    }
+</script>

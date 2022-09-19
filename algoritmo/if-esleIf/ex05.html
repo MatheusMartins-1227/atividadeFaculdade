@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Insira a temperatura <input type="text" id="inputTemperatura">
+  <button onclick="calcularTemperatura()">
+    Categorizar temperatura
+  </button>
+  <div id="divResultado"></div>
+</body>
+</html>
+<script>
+  function calcularTemperatura(){
+    var temperatura = inputTemperatura.value
+
+    if(temperatura < 14){
+      divResultado.innerHTML = "Congelante"
+    } else if (temperatura < 21){
+      divResultado.innerHTML = "Com frio"
+    } else if (temperatura < 24){
+      divResultado.innerHTML = "Confortável"
+    } else if (temperatura < 31){
+      divResultado.innerHTML = "Com calor"
+    } else {
+      divResultado.innerHTML = "Calor escaldante"
+    }
+  }
+</script>

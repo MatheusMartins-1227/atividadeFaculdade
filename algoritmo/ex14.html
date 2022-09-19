@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o 1º numero da progressão: <input type="number" id="input_n1"> <br>
+    Insira a razão: <input type="number" id="input_razao"> <br>
+    Qual número(termo) da progressão você deseja ver? <input type="number" id="input_termo"> <br>
+    <button onclick="calcularPG()">Calcular PG</button>
+    <div id="div_mostrarResultado"></div>
+</body>
+</html>
+<script>
+    function calcularPG(){
+        var total = Number(input_n1.value) * Number(input_razao.value) ** (input_termo.value - 1)  
+        div_mostrarResultado.innerHTML = ` ${input_termo.value}º termo nessa PG será ${total}` 
+    }
+</script>

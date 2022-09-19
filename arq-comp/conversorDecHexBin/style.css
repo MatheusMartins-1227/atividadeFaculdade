@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  background-color: #ECECEC;
+  border-radius: 20px;
+  padding: 40px ;
+}
+
+.titulo{
+  text-align: center;
+}
+
+.divNumDecimal{
+  margin-top: 60px;
+
+}
+
+.divNumDecimal label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input{
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid #CDCDCD;
+  border-style: ridge;
+  outline-width: 1px;
+  box-shadow: inset -2px -4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.converter{
+  margin-top: 40px;
+}
+
+.converter p {
+  margin-bottom: 10px;
+}
+
+.converterOpcoes{
+  display: flex;
+  align-items: center;
+}
+
+.converterOpcoes input{
+  margin: 0px 30px 0px 10px;
+  
+}
+
+.inputCheck{
+  -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: inset -2px -4px 4px rgba(0, 0, 0, 0.25);
+	padding: 10px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+  border-radius: 20px;
+}
+
+.inputCheck:active, .inputCheck:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.inputCheck:checked{
+  background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.inputCheck:checked:after {
+	content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgb(39, 39, 39);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.botao{
+  margin-top: 40px;
+  padding: 10px 40px;
+  font-size: 20px;
+  border: 1px solid #CDCDCD;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.botao:hover{
+  background-color: #dfdfdf;
+}
+
+.botao:active{
+  position: relative;
+  top: 2px;
+  margin-top: 40px;
+  padding: 10px 40px;
+  font-size: 20px;
+  border: 1px solid #979797;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.37) inset;
+  border-radius: 20px;
+} 
+
+.resultado{
+  margin-top: 40px;
+}
+
+.divResultado{
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  word-wrap: break-word;
+  padding: 30px;
+  border: 1px solid #CDCDCD;
+  box-shadow: inset -2px -4px 10px rgba(0, 0, 0, 0.25);
+}
+
+

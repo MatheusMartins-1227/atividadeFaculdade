@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos filhos você tem? <input type="text" id="input_qtd_filhos">
+    <button onclick="verificarSituacao()">
+        Verificar situação
+    </button>
+</body>
+</html>
+<script>
+    function verificarSituacao(){
+        var filhos = "Sem descendentes"
+
+        if(input_qtd_filhos.value == 1){
+            filhos = "Filho único"
+        }
+
+        if(input_qtd_filhos.value >= 2){
+            filhos = "Crescei e multiplicai-vos!"
+        }
+
+        alert(filhos)
+    }
+</script>
