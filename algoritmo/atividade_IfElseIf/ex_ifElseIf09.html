@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    <h3>Você já clicou <span id="span_numero_cliques">0</span> vezes</h3>
+    <div  id="div_resultado"></div><br>
+    <button onclick="cliques()">
+    Clique aqui
+    </button>
+
+
+</body>
+</html>
+
+<script>
+
+    var clique = 0
+   
+    function cliques() {
+        clique += 1;
+        span_numero_cliques.innerHTML = clique
+
+        if(clique < 5 ) {
+            div_resultado.innerHTML = `Dedo fraquinho, hein`
+
+        }else if(clique <= 10) {
+            div_resultado.innerHTML = `Na média - não me impressiona ...`
+
+        }else if(clique <= 15) {
+            div_resultado.innerHTML = `Está treinando em casa !`
+            
+        }else {
+            div_resultado.innerHTML = `Mestre dos cliques !!!`
+        }
+
+    }
+</script>

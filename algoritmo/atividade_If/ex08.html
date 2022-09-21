@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    Quantas partidas o jogador jogou: <input id="input_partidas_disputadas"><br>
+    Quantidade de gols marcado: <input id="input_qtd_gols"><br>
+    <button onclick="estudar_atacante()">
+        Estudar atacante
+    </button>
+    
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function estudar_atacante() {
+        var partidas_disputadas = Number(input_partidas_disputadas.value);
+        var qtd_gols = Number(input_qtd_gols.value);
+        
+        var media_gols = (qtd_gols / partidas_disputadas).toFixed(1)
+        
+
+          if (media_gols < 0.2) {
+            div_resultado.innerHTML = `Melhor mudar de posição! 
+                <img src="https://soutricolor.net/wp-content/uploads/2000/08/Pablo-1.png"> ${media_gols}`
+        } else {
+            if (media_gols <= 0.6) {
+                div_resultado.innerHTML = `Atacante mediano
+                <img src="https://www.lance.com.br/files/article_main/uploads/2022/04/29/626bfff3c32d3.jpeg"> ${media_gols}`
+            } else {
+                div_resultado.innerHTML = ` Atacante de futuro
+                <img src="https://s2.glbimg.com/Ia4VX9XpCglkcQPXY0f9wGQJVjk=/0x0:3000x2000/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/m/M/bCfm3nTDezl0JXt5hGqg/dsc-6095.jpg"> ${media_gols}`
+            }
+        }
+         
+
+    }
+</script>

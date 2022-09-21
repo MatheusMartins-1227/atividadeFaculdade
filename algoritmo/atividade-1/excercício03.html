@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantas horas o usuário dorme?  <input id="qtdsono" type="">
+    <button onclick="botaosono()">calcular sono</button>
+    <div id="sono"></div>
+</body>
+</html>
+<script>
+    function botaosono() {
+    sono.innerHTML= 'Ao dormir ' + Number(qtdsono.value)+ " Horas" + "<br>" +
+     " você dormiu " +Number(qtdsono.value) * 0.05 + " horas na fase 1 <br>" +
+     " você dormiu " +Number(qtdsono.value) * 0.45 + "horas na fase 2  <br>" +
+     " Você dormiu " +Number(qtdsono.value) * 0.30 + "horas na fase 3 <br>" +
+     " você dormiu " +Number(qtdsono.value) * 0.20 + "horas na fase rem <br>"
+        
+   }
+</script>

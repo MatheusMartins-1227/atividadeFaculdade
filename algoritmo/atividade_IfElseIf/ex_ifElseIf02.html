@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    Renda familiar mensal: <input id="input_renda_mensal"><br>
+    <button onclick="verificar_situacao()">
+    Verificar situação
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function verificar_situacao() {
+        var renda_familiar = Number(input_renda_mensal.value);
+
+        if(renda_familiar <= 250) {
+            div_resultado.innerHTML = `
+            Classe E `
+
+        }else if(renda_familiar <= 900) {
+            div_resultado.innerHTML = `
+            Classe D `
+
+        }else if(renda_familiar <= 2500) {
+            div_resultado.innerHTML = `
+            Classe C `
+
+        }else if(renda_familiar <= 9500) {
+            div_resultado.innerHTML = `
+            Classe B `
+
+        }else {
+            div_resultado.innerHTML = `
+            Classe A `
+        }
+        
+    }
+</script>

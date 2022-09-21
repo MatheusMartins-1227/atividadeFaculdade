@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar o valor da passagem de ônibus: <input id="input_valor_passagem_onibus"><br>
+    Solicitar a quantidade de viagens que o usuário faz por mês: <input id="input_qtd_viagens"><br>
+    Solicitar a distância em km do trabalho dele(a) até a sua casa: <input id="input_distancia_km"><br>
+    <button onclick="gasto_usuario()">calcular VT</button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function gasto_usuario() {
+        var valor_pasagem_onibus = Number(input_valor_passagem_onibus.value);
+        var qtd_viagem = Number(input_qtd_viagens.value);
+        var distancia_km = Number(input_distancia_km.value);
+
+        var viagem_uber = qtd_viagem * 0.1;
+        var viagem_onibus = qtd_viagem * 0.9;
+
+        var valor_uber = viagem_uber * 0.75;
+        
+        var total_viagem = valor_uber * viagem_onibus;
+        var total_onibus = valor_pasagem_onibus * qtd_viagem;
+
+        var valor_total = total_viagem + total_onibus;
+        
+
+        div_resultado.innerHTML = ` Você vai gastar R$${valor_total} por mês com transporte.`
+        
+    }
+
+
+</script>

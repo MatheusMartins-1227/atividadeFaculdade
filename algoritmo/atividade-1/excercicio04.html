@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>quantidade de votos que o candidado A teve na eleição </p> <input id="qvotoa">
+   <p>quantidade de votos que o candidado b teve na eleição </p> <input id="qvotob">
+   <p>quantidade de votos brancos que houveram na eleição </p> <input id="qvotoc">
+   <p>quantidade de votos nulo que houveram na eleição </p> <input id="qvotod">
+ 
+ <br> <button onclick="resultado_da_eleicao()">clique</button>
+
+   <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function resultado_da_eleicao() {
+        exibir.innerHTML = 'total de votos = ' + (Number(qvotoa.value) +
+         Number(qvotob.value) + Number(qvotoc.value) + Number(qvotod.value)) + "<br>" +
+         'Candidato A =' + (qvotoa.value) / (Number(qvotoa.value) +
+         Number(qvotob.value) + Number(qvotoc.value) + Number(qvotod.value)) * 100 +"%" + "<br>" +
+         'Candidato B =' + (qvotob.value) /  + (Number(qvotoa.value) +
+         Number(qvotob.value) + Number(qvotoc.value) + Number(qvotod.value)) * 100 + "%" + "<br>" +
+         'invalidos = '  + (Number(qvotoc.value) + Number(qvotod.value)) / (Number(qvotoa.value) + 
+         Number(qvotob.value) + Number(qvotoc.value) + Number(qvotod.value)) * 100 + "%"
+         
+
+
+ }
+</script>

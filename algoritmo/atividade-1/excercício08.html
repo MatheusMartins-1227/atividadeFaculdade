@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    solicitar o Ki base do guerreiro sayajin: <input id="input_kibase"><br>
+    <U>tranformar em ...<u><BR>
+        <button onclick="ssj1()">SSJ</button> 
+        <button onclick="ssj2()">SSJ2</button> 
+        <button onclick="ssj3()">SSJ3</button> 
+        <div id="div_resultadoki"></div>
+</body>
+</html>
+
+<script>
+    function ssj1() {
+        var total_ssj1 = Number(input_kibase.value) * 50;
+
+        div_resultadoki.innerHTML = ` Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${total_ssj1} `
+
+    }
+
+    function ssj2() {
+        var total_ssj2 = Number(input_kibase.value) * 100;
+
+        div_resultadoki.innerHTML = ` Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${total_ssj2} `
+
+    }
+
+    function ssj3() {
+        var total_ssj3 = Number(input_kibase.value) * 200;
+
+        div_resultadoki.innerHTML = ` Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${total_ssj3} `
+        
+    }
+</script>

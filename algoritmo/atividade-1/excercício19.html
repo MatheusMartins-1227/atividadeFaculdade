@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Porções de pão francês: <span id="id_pao">0</span><br>  
+    Porções de carne bovina: <span id="id_carne">0</span><br>
+    Porções de carne de soja: <span id="id_soja">0</span><br>  
+    Porções de arroz com feijão: <span id="id_arroz">0</span><br>
+    Total de calorias: <span id="id_calorias">0</span><br> 
+
+    <button onclick="pao()">Comer um pão francês</button><br>
+    <button onclick="carne()">Comer porção de carne bovina</button><br>
+    <button onclick="soja()">Comer porção de carne de soja</button><br>
+    <button onclick="arroz_feijao()">Comer porção de arroz com feijão</button><br>
+    <button onclick="recomecar()">Recomeçar</button>
+
+</body>
+</html>
+<script>
+
+    var contador_pao = 0
+    function pao() { 
+
+        contador_pao += 1 
+        id_pao.innerHTML = contador_pao
+        var caloria_pao = contador_pao * 50
+        id_calorias.innerHTML = caloria_pao;
+
+    }
+
+    var contador_carne = 0
+    function carne() {
+
+        contador_carne += 1
+        id_carne.innerHTML = contador_carne
+        var caloria_carne = contador_carne * 100
+        id_calorias.innerHTML = caloria_carne;
+        
+    }
+
+    function soja() {
+        
+        
+    }
+
+</script>

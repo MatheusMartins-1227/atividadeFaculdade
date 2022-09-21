@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    Tempo do cozimento do arroz: <input id="input_tempo_cozimento"><br>
+    <button onclick="provar_arroz()">
+    Provar arroz
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function provar_arroz() {
+        var tempo_cozimento = Number(input_tempo_cozimento.value);
+
+        if(tempo_cozimento == 5) {
+            div_resultado.innerHTML = ` Parabéns! Arroz perfeito! 
+            <img src="https://images.aws.nestle.recipes/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg"> `
+        } else {
+            div_resultado.innerHTML = ` Arroz cru ou cozido demais! 
+            <img src="https://espacogourmet.meionorte.com/wp-content/uploads/2017/03/arroz-queimado-1110x400-1280x720.jpg"> `
+        }
+        
+    }
+</script>

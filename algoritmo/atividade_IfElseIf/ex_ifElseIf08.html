@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <b>Quantos pães francesses tem comido por dia?</b> <input id="input_pao_por_dia"><br>
+    <b>Quantos pacotes de bolacha recheada tem comido por dia?</b> <input id="input_bolacha_dia"><br>
+    <b>Quantos copos de achocolatado tem tomado por dia?</b> <input id="input_achocolatado_dia"><br>
+    <button onclick="verificar_calorias()">
+        Verificar calorias
+    </button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar_calorias() {
+        var pao_dia = Number(input_pao_por_dia.value);
+        var bolacha_dia = Number(input_bolacha_dia.value);
+        var achocolatado_dia = Number(input_achocolatado_dia.value);
+
+        var paoCalorias = pao_dia * 50;
+        var bolachaCalorias = bolacha_dia * 80;
+        var achocolatadoCalorias = achocolatado_dia * 70;
+
+        var calorias_total = paoCalorias + bolachaCalorias + achocolatadoCalorias;
+
+        if(calorias_total < 200) {
+            div_resultado.innerHTML = `Está perdendo peso`
+
+        }else if(calorias_total <= 400) {
+            div_resultado.innerHTML = `Nem lá, nem cá. Vai manter a forma.`
+
+        }else {
+            div_resultado.innerHTML = `Forte tendência á ganhar peso !`
+        }
+
+    }
+</script>

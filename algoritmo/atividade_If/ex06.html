@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    Temperatura do ambiente: <input id="input_temperatura"><br>
+    <button onclick="verificar_clima()">
+    Verificar clima
+    </button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar_clima() {
+        var temperatura = Number(input_temperatura.value);
+
+        if(temperatura < 10){
+            div_resultado.innerHTML = ` Apropriada p/ conservar alimento 
+                 <img src="https://s2.glbimg.com/osHI0XZu7zfZ-ZFnXU1AlgGOZHo=/e.glbimg.com/og/ed/f/original/2018/07/03/organico.jpg"> `
+        } else {
+            div_resultado.innerHTML = ` Inapropriada p/ conservar alimento 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw1J_bC7y1I3RJwfxNf8mrGXtZsRfU0zHkL3TDHvwWUjQwb1bgeb4m9YsEFKvw3tnKwII&usqp=CAU"> `
+        }
+
+        
+    }
+</script>

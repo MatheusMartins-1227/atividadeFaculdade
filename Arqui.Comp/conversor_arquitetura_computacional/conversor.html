@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <img src="https://cdn-icons-png.flaticon.com/512/346/346399.png" alt="">
+    
+    <h1>
+        Conversor de base
+    </h1>
+    <h4>
+        Decimal
+    </h4>
+
+    <input id="demo1" placeholder="digite um valor em decimal"> 
+    <br>
+    <br>
+    <br>
+
+    <h3>
+        Converter para
+    </h3>
+
+    <input onclick="aparecer_octal()" type="checkbox">
+    <b>octal</b>
+    <br>
+    <div style="display: block" id="demo2">
+    </div>
+    <br>
+    <br>
+
+    <input onclick="aparecer_hexa()" type="checkbox">
+    <b>hexadecimal</b>
+    <br>
+    <div style="display: block;
+    backgroud-color: royalblue" id="demo3">
+    </div>
+    <br>
+    <br>
+
+    <input onclick="aparecer_bin()" type="checkbox">
+    <b>binario</b>
+    <br>
+    <div style="display:block;
+    backgroud-color: royalblue" id="demo4">
+    </div>
+
+    <button onclick="converter()">
+    Converter
+    </button>
+</center>
+</body>
+</html>
+
+<script>
+    
+
+    function converter() {
+                
+                var decimal = Number(demo1.value);
+
+            let octal = decimal.toString(8);
+
+            let hexadecimal = decimal.toString(16);
+
+            let binaria = decimal.toString(2);
+
+            console.log (decimal);
+            console.log (octal);
+            console.log (hexadecimal);
+            console.log (binaria);
+
+            document.getElementById("demo1").innerHTML = ` ${decimal}`;
+            document.getElementById("demo2").innerHTML = ` ${octal}`;
+            document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+            document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+            }
+
+            function aparecer_bin() {
+                demo4.style.display = 'block'
+            }
+
+            function aparecer_hexa() {
+                demo3.style.display = 'block'
+            }
+
+            function aparecer_octal() {
+                demo2.style.display = 'block'
+            }
+            document.bgColor = "#660033";
+        
+</script>
