@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="meses_ano">
+        <option value="inverno">Janeiro</option>
+        <option value="inverno">Fevereiro</option>
+        <option value="primavera">Março</option>
+        <option value="primevera">Abril</option>
+        <option value="primavera">Maio</option>
+        <option value="verao">Junho</option>
+        <option value="verao">Julho</option>
+        <option value="verao">Agosto</option>
+        <option value="outono">Setembro</option>
+        <option value="outono">Outubro</option>
+        <option value="outono">Novembro</option>
+        <option value="inverno">Dezembro</option>
+    </select>
+    <button onclick="ver_estacao()">
+        Ver estação
+    </button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function ver_estacao() {
+        var mes = meses_ano.value
+
+        if(mes == 'inverno') {
+            div_resultado.innerHTML = `
+            <img src="https://cdn.shopify.com/s/files/1/0637/2609/2501/files/estocolmo.jpg?v=1659637385">`
+
+        }else if(mes == 'primavera') {
+            div_resultado.innerHTML = `
+            <img src="https://i.pinimg.com/236x/72/54/69/72546994cfcb48db3d707e03b8e196e6.jpg">`
+
+        }else if(mes == 'verao') {
+            div_resultado.innerHTML = `
+            <img src="https://s.calendarr.com/upload/de/62/inicio-do-verao.jpg">`
+
+        }else if(mes == 'outono') {
+            div_resultado.innerHTML = `
+            <img src="https://www.lopes.com.br/blog/wp-content/uploads/2017/03/capa.jpg">`
+        }
+    }
+</script>

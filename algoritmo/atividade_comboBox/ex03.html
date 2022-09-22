@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_times">
+        <option value="sao_paulo">São Paulo</option>
+        <option value="santos">Santos</option>
+        <option value="palmeiras">Palmeiras</option>
+        <option value="corinthians">Corinthians</option>
+    </select>
+    <button onclick="ver_escudo()">
+        Ver escudo
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function ver_escudo() {
+        var times = select_times.value;
+
+        if(times == 'sao_paulo') {
+            div_resultado.innerHTML = `
+            <img src="https://yt3.ggpht.com/ytc/AMLnZu9ofL2xv66-wy-jcq_8HGEYNddVkd79P2168_oqOQ=s900-c-k-c0x00ffffff-no-rj">`
+
+        }else if(times == 'santos') {
+            div_resultado.innerHTML = `
+            <img src="https://media.santosfc.com.br/wp-content/uploads/2022/04/Asset-2.jpg">`
+
+        }else if(times == 'palmeiras') {
+            div_resultado.innerHTML = `
+            <img src="https://a.espncdn.com/i/teamlogos/soccer/500/2029.png">`
+
+        }else if(times == 'corinthians') {
+            div_resultado.innerHTML = `
+            <img src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png">`
+        }
+
+        
+    }
+</script>

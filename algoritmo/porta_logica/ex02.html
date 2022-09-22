@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sua renda: <input id="input_renda"><br>
+    Renda da sua familia: <input id="input_renda_familiar"><br>
+    <button onclick="verificar_ajuda()">
+        Verificar ajuda
+    </button>
+
+</body>
+</html>
+
+<script>
+    function verificar_ajuda() {
+        var renda = Number(input_renda.value)
+        var renda_familiar = Number(input_renda_familiar.value)
+
+        if(renda <= 1050 && renda_familiar <= 2100) {
+            alert('Você terá direito!')
+        }else {
+            alert('Você NÃO terá direito')
+        }
+    }
+</script>
