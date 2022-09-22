@@ -7,6 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    Você já clicou <span id="span_clique">0</span> vezes
+    <button onclick="cliques_cabalistico()">
+        Clique cabalístico
+    </button>
+
 </body>
 </html>
+
+<script>
+    var cliques = 0
+    function cliques_cabalistico() {
+        cliques += 1
+        span_clique.innerHTML = cliques
+
+        if(cliques == 3 || cliques == 4 || cliques == 7 || cliques == 10) {
+            alert(`Você clicou ${cliques} vezes e Juliana gosta desse número!`)
+        }
+
+        //sem variavel global
+
+        
+        
+    }
+</script>
