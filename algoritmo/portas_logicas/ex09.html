@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_tipo_de_arroz">
+        <option value="integral">Arroz Integral</option>
+        <option value="branco">Arroz Branco</option>
+    </select><br>
+
+    Tempo de cozimento: <input id="input_tempo"><br>
+    Quantidade de sal usado: <input id="input_qtd_sal"><br>
+    <button onclick="avaliar_arroz()">
+        Avaliar arroz
+    </button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function avaliar_arroz() {
+        var tipo_de_arroz = select_tipo_de_arroz.value;
+        var tempo_cozimento = Number(input_tempo.value);
+        var qtd_sal = Number(input_qtd_sal.value);
+
+        if(tipo_de_arroz == 'branco' && tempo_cozimento == 10 && qtd_sal <= 10) {
+        div_resultado.innerHTML = `
+        Arroz perfeito
+        <img src="https://cdn5.soreceitasfaceis.com/wp-content/uploads/2015/08/arroz-branco-soltinho.jpg">`
+        
+        }else if(tipo_de_arroz == 'integral' && tempo_cozimento == 20 && qtd_sal <= 15) {
+            div_resultado.innerHTML = `
+            Arroz perfeito
+            <img src="https://cdn.cumbucaboa.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/r/arroz_integral.jpg.png">`
+
+        }else {
+            div_resultado.innerHTML = `
+            Seu arroz não está perfeito
+            <img src="https://i.pinimg.com/originals/41/d4/b9/41d4b9a4fbdaca6e4777d1534a099877.png"`
+        }
+    }
+</script>

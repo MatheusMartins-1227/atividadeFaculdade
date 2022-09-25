@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota da avaliação: <input id="input_nota_avaliacao"><br>
+    <button onclick="avaliar()">
+        Avaliar
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function avaliar() {
+    var avaliacao = Number(input_nota_avaliacao.value);
+
+    if(avaliacao < 0 || avaliacao > 5) {
+        alert(`Nota inválida`)
+
+    }else if(avaliacao < 0.5) {
+   div_resultado.innerHTML = `
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEBMVEBIVFRYSEBAWFhAQEg4YFREXFhYSExUYHSkgGBsxGxUXITEiJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAIcBdwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcCBAUDAf/EAD0QAAIBAgMFBQUGBQQDAQAAAAABAgMRBAUhBhIxQVEiYXGBkROhscHRByMyQlJyU2KCwvBDkrLhc9LxFP/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCmwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGdGm5yUY6tuyNjH4GVFre1Ur7suF7cTobL4Tfm59OzHxlx93/Ik20+Wb+Ebiu1T+8j/AErtL/a37gK+AAAAAAAAAN/JMN7StFco9p+XD32AxxeWVKdNVJcG7P8AlfRmkWbjsrVTDypdY6Po+KfqVm01o9GtGuj5oD4AAAAAAAAbsctqOj7a3Z6c7dTXw1F1JxguMml4dX6FmQy+Ko7ltN21vICrgbGOw7pVJU3+V2XhxXuNcAAAAAAAADcwWXTqxlKOijpfq+hqNW0ejWjXQsfJsrVPDRg1q43l4y1ZCtocL7Os+ktfNaP6+YHMAAAAAAAANjBYSVWW7HkryfGyNcnOx2W2w7qSWtRtr9sdF77vzQELxNB05uD4rn1XFNHkSDanB7rU1ye4/DjF/H1I+AAAAAAAfUvLv5LvZIcJsu5/n9LLz5gR0+pf9LqTGnsWucpPzX0OjgdlqdN3S16u8mvC/ADDZbL9yEU+K7Uv3P8Ay3kSeVJNWfDg0MJhVBWRtbgFOZ1lzw1eVJrRO9N/qi+D+XijRLezfJqWIjapFSt+F8JRv0a1RGa+xML9mUl5p/FAQcEuqbFtcKj80mRzM8E6FR03JSaSba5X5Ncn9UBqA7mV7POvFS31qr2X+eR1YbFrnOXu+gEOJnsVlrS9pJay18lw+vobmE2QpRd2t7xu/dwJPg8IoKyAydPQrTa/LXRxDkl2KnaT5KX5l8/MtTcNDM8thWjuzipLv1Ap0E5xGxVP8rlHzv8AG5qz2Ltwm/O30AiAOjnGVPDNJyUr3suDVubR65NkjxKbU1Gzs1xYHJBMIbF9Zy8t36G5htjaSfavLxb+CA5OxOWupVdVrsx0j3t8X8vMsJ09DDL8DGlFRikkuS0NzcArjbfLnGarJaPsy7uj+K9CKlyY7AxqRcZK6fLiRfFbF076Xh4N/BgQMEvnsXbhOXnb6HHzfJHh1vOaetkuDYHIB0Mnyx4mbgpKDSvrq34IkENiutSXlZfICHnW2Yy14jERVuxFqc3y01S838ySUNiqf5nKXnb4WJPlWV06Ed2nFRXO3PvYHt7PQh+2OXOUd6Ku49pd/wCpemvkTrcNTGYNTVmBTIJ/jdkacm2lZvpde7gaFTYvpOXu+gEPB3cw2cdJN76slfXuOXl+FdapGkpKDlom+HC9vEDWBL6exT51H5JI2qGxNP8ANKT80vggIdl+DnXqxpQ/FJ2vx3Vzk+5ItyhhY04RhFWjGKjFdElZHhk+SUcMvu4JN6OXGT7m3qdRwAiO0eB34yX6lx6NcH6lfTi02mrNaNdC5cXhFNWZHMfstCo7ta9dU/NriBXYJjU2MXKcl6fQ5+L2YlD83honcCPAzqR3ZNXTs2rrg7Pij4BidnJM9nQajK86a4fqp/t6ruOMALdyrMqVaKlFpp8JLh4Ncn3HWVNFNZRmU8NUU4vs3XtIcpr69GW3leJ342etuD7gNzdFjIAY2POpFJXdkuLfQ9WV79oecVHU/wDyRe7TUVKpb/UctVF9yVtOdwM9o9r460sJq+Eq/FL/AMa5+PDxIVKTbbbbb1berb6tmIA6GU5tUw8rx1jftQfB96fJlj5FnVHExunZ/mT0lHukvnwKoPbC4mdKaqU3uyXB9e5rmu4C7VTRkonK2czH29GMno3FO3G1+Kv4nXA+WPjRkfGB5ygiIbS7VU6N6VG1Srwb4wp+PV9xn9oGcTo040ab3XUvvSWjUVa6XS9+JXIHtWrTqzcptyk+Lf8AmiNnB1qlCUZ03aXNcYtdGjTpz3Xf/OB6Kulolp/2n8gLK2cz6niVuytCouMbqztpeL5okUaaKUoYndS4prVNXTXg01Zlm7FZzLE0O3+OD3G/1WSafo153AkKgN0+3PtwPiVjGrG5k2R/a/OHh6DcPxNqK7r6XA8Noc9p4fsLt1GtIrl3t8l/mpXWZ4urVnvVXd8kvwx14JeXiYyxTb3ndu8nJt3b3pX4nnUmm27a6W7vIDGjVlCSlBuMk7qS4on+zW1lOraliLU6nCM+EKn/AKsr0AXnGmjJRIb9nmc1Kqlh6jctyKlTk9Xu3s4vrbT1JoB8sfGjI+AecoI4meZxSw8byevBLi5Polz+BtZ9mHsaUpdIuXlFXZUuMxc603UqO8n6RX6V0QG1m+b1MRLXswvpDr3yfN+45/8AngfABNNmtsFG1LF8OEa/TuqL+5efUn1NRaUotNNXTVmmuqZRpLdgM6qU68cLJ71KpfdT/wBKSi5Xj0Ts7rrZ9bhZG6fbH0AYtGEoI9GaOZ4rcjpxegGrmePp0ottpJcW+C+r7ivM62glWbjTvGD0cuEpr+1d3/w1s+zGderK7tCMnGEeSs7bz6tnNAAAAAAPXDUt+cYfqko+rsW3kcdG+rK02bob1dPlBOXm+yvi/QtHDVIUaW9OShGKvKTdkgOiCvc+26nJuGEW7H+LJXk/2xfDz9Dl5fthiqcr1Je2jzTUYyX7XFfEC1Ss/tGw7jioz5Tpr1g2n7nEmmS5/SxMbxl4p6Si+kly8eBxvtHwqlh41VxpzWv8s+y167voBXQAABsGzl1H2lWEOslfwWr9yYFm7IYZwoxT4qMU/G2vvZITQy1KFNX00u2RnaDbiMG6eFSnLg6j1hHw/V8AJqfCpcPtbjYz3nU9oucZRil5OKTROdn9qaWJW6+xU5wfHxX6l3gcX7ScP2aVTpJwf9Sv/aQQtbbLDKrhKltWo78fGPa+RVIAAACx/s6w27Qc/wBcm/l/aiuUr6LjyLhyDDqjQhHhaK+AHVBFtotsKeHvTpfeVOa5Q/c/lx8CGPazG7+/7W38m7Dc8OF/fcC2yJbe4dyw7f6bS9Hr7rn3Z7bOnWtTrJU6nBP8k/B8n3P3nZzqiqlKS4ppgU4DKcHFuL4ptPydjEAAAJv9mWH7darySjTXjrJ/2lgEa2Dw3s8HGT4zbqPzenuSPfPtpqWGVr703+GK1b+i72B3gVNjNrsZOW9GfslyjFRl6uSd/d4HfyDbq7UMWlHkqy0j/WuXjw8AO3tLQ36bXJpxfmrFUWto+PMuTMFGpTbi001dNap9Cp84o7lea5N7y/q1+NwNIAACRbBYbfx0HypxnUf+3dXvmR0nv2ZYa0a1Z85KmvCK3n/yXoBOgcrN87pYeLlKSXfxu+kVzZAcz2xxNSX3T9jHk7RlN+Ld0vBeoFpM42eQ7N+jInkm3VWDUcUvaw/iJJTj3tLSS8LeZMqleniKW/TkpxktGvn0YFTZnS3K1SP8za8Jdpe5mqdnaeju1Iy6qz8Yv6NehxgAAAAADo5NmSw7k3Hf3lGyvb8Lb17tT5m2b1sS/vJdlfhpq6jHvtzfe/cc8AAAB64bETpyU6cnCS4SXwfVdzO5jNqJ1sNKhOGsrLeT7OjTvZ6rhwI8AAAAG3leLVGqqjW8ldW4PVW0NQAdjONoq+JW5f2dP+HF/i/c+fh8TjgAD7GTTTTaa1TTaa701wPgAkmE2tqqm6dVe0umlLg3dW7S+aI2kAAAAGdGe7KMuNpKVutnex3s12rrVY7lP7mFrOz7b8Hy+JHgAAAA72U7UVqK3J/ew4JN9qPg+fn6nBAHriqu/OU7W3pOVul3c8gAAAAkctrKkaEKNKKg4wjBzev4UldLy5+hH6lSUm5SblJ6uTd2/MwAAAAdXJ8+rYbsxe/T505cP6X+X4Gvm2NVepvqO7olbjzb+ZpAAAAB38q2llh8P7GELvek1K9l2uvN+BwAB74zF1K0t+pJyfLpFdIrkjwAAG7lmZ1sNLepStf8UXrCf7l8+JpADqZxmqxCj2NxpuT1utVwRywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=">`
+    
+        }else if(avaliacao < 1) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/1820/1820006.png"> <img src="https://cdn-icons-png.flaticon.com/512/1820/1820006.png"> <img src="https://cdn-icons-png.flaticon.com/512/1820/1820006.png"> <img src="https://cdn-icons-png.flaticon.com/512/1820/1820006.png"> <img src="https://cdn-icons-png.flaticon.com/512/1820/1820006.png">`
+       
+        }else if(avaliacao < 1.5) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">`
+
+        }else if(avaliacao < 2) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> `
+
+        }else if(avaliacao < 2.5) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> `
+
+        }else if(avaliacao < 3) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">   `
+
+        }else if(avaliacao < 3.5) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> `
+
+        }else if(avaliacao < 4) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> <img src="https://cdn-icons-png.flaticon.com/512/149/149222.png"> `
+            
+        }else if(avaliacao < 4.5) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png"> <img src=""> `
+
+        }else if(avaliacao <= 5) {
+            div_resultado.innerHTML = `
+            <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png">  <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png"> <img src="https://cdn-icons-png.flaticon.com/512/148/148841.png"> `
+
+        } 
+    }
+</script>

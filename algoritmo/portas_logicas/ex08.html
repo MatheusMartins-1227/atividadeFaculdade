@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    nome da empresa: <input id="input_empresa"><br>
-    valor da bolsa da empresa: <input id="input_valor_bolsa"><br>
-    valor VR da empresa: <input id="input_valor_vr"><br>
-    tempo de deslocamento da empresa para a SPTECH: <input id="input_deslocamento"><br>
+    <b>Nome da empresa:</b> <input id="input_empresa"><br>
+    <b>Valor da bolsa da empresa:</b> <input id="input_valor_bolsa"><br>
+    <b>Valor VR da empresa:</b> <input id="input_valor_vr"><br>
+    <b>Tempo de deslocamento da empresa para a SPTECH:</b> <input id="input_deslocamento"><br>
     <button onclick="avaliar_empresa()">
         É preferida?
     </button>
@@ -20,7 +20,18 @@
 
 <script>
     function avaliar_empresa() {
-        
+        var valor_bolsa_empresa = Number(input_valor_bolsa.value);
+        var valor_vr = Number(input_valor_vr.value);
+        var deslocamento = Number(input_deslocamento.value);
+
+        if(valor_bolsa_empresa >= 1800 || valor_vr >= 20 || deslocamento <= 30) {
+            div_resultado.innerHTML = `
+            A empresa ${input_empresa.value} é uma de suas preferências`
+
+        }else [
+            div_resultado.innerHTML = `
+            A empresa ${input_empresa.value} está fora da sua lista`
+        ]
         
     }
 </script>
