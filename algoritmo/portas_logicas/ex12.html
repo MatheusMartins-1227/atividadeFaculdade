@@ -20,16 +20,22 @@
 
 <script>
     function analisar_aluno() {
+        if(input_nota.value != "" &&
+           input_frequencia.value !=""){ /*não mostrar os resultados da div,
+                                         quanto não for inserido um valor nas input*/
+
         var nota = Number(input_nota.value);
         var frequencia = Number(input_frequencia.value);
 
         if(nota < 0 || nota > 10) {
             alert(`Onde já se viu nota <0 ou >10?!`)
+                div_resultado.innerHTML = ""
 
         }else if(frequencia < 0 || frequencia > 100) {
             alert(`Onde já se viu frequência <0 ou >100?!`)
+                div_resultado.innerHTML = ""
 
-        }else if(nota <= 6) {
+        }else if(nota < 6) {
             div_resultado.innerHTML = `
             Aluno ficou abaixo da média`
 
@@ -37,18 +43,19 @@
             div_resultado.innerHTML = `
             Aluno ficou da média`
 
-        }else if(nota <= 10) {
+        }else {
             div_resultado.innerHTML = `
             Aluno acima da média`
 
-        }else if(frequencia >= 75) {
-            div_resultado.innerHTML = `
+        }if(frequencia >= 75) {
+            div_resultado.innerHTML += `<br>
             Aluno aprovado por frequência`
 
         }else {
-            div_resultado.innerHTML = `
+            div_resultado.innerHTML += `<br>
             Aluno reprovado por frequência`
         }
+    }
     }
 </script>
 
