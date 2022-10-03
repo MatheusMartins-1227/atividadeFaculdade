@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+
+    <button onclick="verificar_numero()">
+        Números cabalísticos
+    </button>
+    <div id="div_cabalistico"></div>
+
+</body>
+
+</html>
+
+<script>
+    function verificar_numero() {
+        var contador = 1
+
+        while (contador <= 15) {
+
+            if (contador != 3 &&
+                contador != 4 &&
+                contador != 7 &&
+                contador != 10 &&
+                contador != 12) {
+                div_cabalistico.innerHTML += `
+            ${contador}<br>`
+
+                
+            }
+
+            contador += 1  /* contador fora do if (dentro do while)*/
+
+
+
+        }
+    }
+</script>

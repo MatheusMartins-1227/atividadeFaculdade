@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+    <button onclick="sobre_quarentena()">
+        Diga algo sobre a quarentena
+    </button>
+    <div id="div_frase"></div>
+
+</body>
+</html>
+
+<script>
+    function sobre_quarentena() {
+        var contador = 0
+
+        while (contador < 7) {
+            div_frase.innerHTML += `
+            ${++contador} - Fui parar no Tinder. <br>` 
+
+            /*${contador++} -- mostra a partir do 0, mostrar um casa antes de onde o numero esta*/
+             /*${++contador} -- mostra depois do 0, mostrando onde o numero esta*/
+        }
+    }
+</script>
