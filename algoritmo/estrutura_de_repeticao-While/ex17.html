@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+</head>
+
+<body>
+
+    quantas pessoas vão entrar no carro? <input id="input_qtd_pessoas"><br>
+    Qual a capacidade do carro: <input id="input_capacidade"><br>
+    <button onclick="carona()">
+        Partiu carona
+    </button>
+
+</body>
+
+</html>
+
+<script>
+    function carona() {
+        var pessoas = Number(input_qtd_pessoas.value)
+        var capacidade = Number(input_capacidade.value)
+        var contador = 1
+        while (contador <= pessoas) {
+            if (contador == 1 && capacidade < 5) {
+                resultado.innerHTML += `Entrou o ${contador}º passageiro, que é o motorista <br>`
+            }
+            else if (contador >= 6 && capacidade >= 6) {
+                resultado.innerHTML += `o ${contador}º passageiro vai ter que esperar <br>`
+            }
+            else {
+                resultado.innerHTML += `Entrou o ${contador}º passageiro <br>`
+            }
+            contador += 1
+        }
+    }
+</script>

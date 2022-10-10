@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+</head>
+
+<body>
+
+    Idade do usuário: <input id="input_idade"><br>
+    <button onclick="verificar_idade()">
+        verificar idade
+    </button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+    function verificar_idade() {
+        var idade = Number(input_idade.value);
+        var contador = 0
+
+        while (contador >= idade) {
+            if (contador <= 4) {
+                div_resultado.innerHTML += `
+                ${contador} anos (Primeira Infância)`
+
+            } else if (contador <= 6) {
+                div_resultado.innerHTML += `
+                ${contador} anos (pré-escola)`
+
+            } else if (contador <= 10) {
+                div_resultado.innerHTML += `
+                ${contador} anos (segunda infância)`
+
+            } else if (contador <= 18) {
+                div_resultado.innerHTML += `
+                ${contador} anos (adolescência)`
+
+            } else if (contador <= 50) {
+                div_resultado.innerHTML += `
+                ${contador} anos (adulto)`
+
+            } else if (contador <= 100) {
+                div_resultado.innerHTML += `
+                ${contador} anos (melhor idade)`
+
+            } else {
+                div_resultado.innerHTML += `
+                ${contador} anos (ancião) `
+            }
+
+            contador += 1
+        }
+    }
+</script>

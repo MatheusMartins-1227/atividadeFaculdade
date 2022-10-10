@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!--.e o nome da sua class-->
+<!--div = #nome da div-->
+
 <body>
-    <!--.e o nome da sua class-->
-    <!--div = #nome da div-->
+
+    Quantos mundial você tem? <input id="sem_mundial">
+    <button onclick="mundial()">VER MUNDIAIS DA FIFA</button>
+    <div id="div_resultado"></div>
 
 </body>
+
 </html>
 
 <script>
-    ?
+    function mundial() {
+        var mundiais = Number(sem_mundial.value)
+        var qtd_mundial = 0
+        if (mundiais <= 0)
+            div_resultado.innerHTML = `<img src= "https://www.lance.com.br/galerias/wp-content/uploads/2022/02/memes-palmeiras-mundial-chelsea-12-1-360x474.jpg">`
+        else {
+            while (mundiais > qtd_mundial) {
+                div_resultado.innerHTML += `<img src = "https://lendasdofutebol.com/wp-content/uploads/2022/04/sao-paulo-mundial.jpg">`
+                qtd_mundial += 1
+            }
+        }
+    }
 </script>

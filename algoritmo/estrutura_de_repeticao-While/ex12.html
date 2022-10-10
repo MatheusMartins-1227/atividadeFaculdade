@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    Até que numero deseja que seja construida: <input id="input_tabuada">
+    <select id="tabuada">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <button onclick="ver_tabuada()">VER TABUADA</button>
+    <div id="div_resultado"></div>
+
 </body>
+
 </html>
 
 <script>
-    ?
+    function ver_tabuada() {
+        var combo = Number(tabuada.value)
+        var conta = Number(input_tabuada.value)
+        var contador = 0
+        while (contador <= conta) {
+            if (contador % 2 == 0) {
+                div_resultado.innerHTML += `<span style="color: blue">${combo} X ${contador} = ${combo * contador} </span> <br>`
+            }
+            else {
+                div_resultado.innerHTML += `<span style="color: red">${combo} X ${contador} = ${combo * contador} </span> <br>`
+            }
+            contador += 1
+        }
+
+    }
 </script>
