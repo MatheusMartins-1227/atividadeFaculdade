@@ -16,6 +16,7 @@
     <button onclick="partiu_trajeto()">
         #Partiu Trajeto
     </button>
+    <div id="div_resultado"></div>
 
 </body>
 
@@ -26,21 +27,38 @@
         var onibus = Number(input_onibus.value)
         var trem = Number(input_trens.value)
         var metro = Number(input_metros.value)
+
         var contador = 1
+        
         while (contador <= onibus) {
-            resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus</span> <br>`
-            contador += 1
+            div_resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus</span> <br>`
+            contador += 1 //ou CONTADOR ++
         }
         contador = 1
         while (contador <= trem) {
-            resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem</span> <br>`
+            div_resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem</span> <br>`
             contador += 1
         }
         contador = 1
         while (contador <= metro) {
-            resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro</span> <br>`
+            div_resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro</span> <br>`
             contador += 1
         }
         contador = 1
     }
+
+        //COM UM WHIILE 
+
+    //var contador = 1;
+    //var onibus = qtd_onibus;
+    //var soma_onibustrem = qtd_onibus + qtd_Trens;
+    //var soma_transporte = qtd_onibus + qtd_Trens + qtd_metro
+//
+    //    while (
+    //        contador <= soma soma_transporte
+//
+    //    ) {
+    //        if (contador <= totalonibus)
+    //    }
+
 </script>

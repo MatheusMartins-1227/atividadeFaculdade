@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20</title>
+    <title>aula</title>
 </head>
-
 <body>
-
-    <button onclick="curto2e5()">CURTO 2 E 5</button>
-    <div id="resultado"></div>
+    
+    AULA SOBRE FOR (METODO QUE PODE SUBSTITUIR O WHILE EM ALGUNS CASO)
+    E AS NOVAS VARIAVEIS.
 
 </body>
-
 </html>
 
 <script>
-    function curto2e5() {
-        var contador = 0
 
 
         //OUTRO METODO ALEM DO WHILE
@@ -40,23 +35,4 @@
         const valo_que_não_pode_mudar = exemplo- cpf  //O padrão é que se use CONST ao 
                                                 //invés de var/let NA DUVIDA TUDO É CONSTANTE (CONST)
 
-
-
-
-        while (contador < 100) {
-            if (contador % 3 == 0 && contador % 5 == 0) {  //OU SÓ COLOCAR MULTIPLO DE 15 QUE ABRANGE O 3 E O 5
-                resultado.innerHTML += `É TRI!É PENTA! <br>`
-            }
-            else if (contador % 3 == 0) {
-                resultado.innerHTML += `É TRI <br>`
-            }
-            else if (contador % 5 == 0) {
-                resultado.innerHTML += `É PENTA <br>`
-            }
-            else {
-                resultado.innerHTML += `${contador} <br>`
-            }
-            contador += 1   //OU "CONTADOR++"
-        }
-    }
 </script>
