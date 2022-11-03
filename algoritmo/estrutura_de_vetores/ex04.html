@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    
+    Filmes que mais gosta: <input type="text" id="input_filmes"><br>
+    <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+    <div id="div_resultado"></div>
+
+    <span style="color: blue;"></span>
+
+</body>
+</html>
+
+<script>
+    var lista_filmes = [];
+    function cadastrar() {
+        var filmes = input_filmes.value;
+
+        lista_filmes.push(filmes);
+
+        div_resultado.innerHTML = ""
+        for (var contador = 0;
+             contador < lista_filmes.length;
+             contador++) {
+
+                if (contador % 2 == 0) {
+                    div_resultado.innerHTML += `
+                    <span style="color: blue;">
+                        ${lista_filmes[contador]}<br>
+                    </span>`
+                }else {
+                    div_resultado.innerHTML += `
+                    <span style="color: red;">
+                        ${lista_filmes[contador]}<br>
+                    </span>`
+                }
+
+                }
+
+
+    }
+</script>
+

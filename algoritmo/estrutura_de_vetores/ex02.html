@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Lugares para onde já viajou: <input type="text" id="input_lugares"><br>
+    <button onclick="cadastrar_local()">
+        Cadastrar local
+    </button>
+    Pesquisa um local para onde já viajou: <input type="text" id="input_pesquisa"><br>
+    <button onclick="relembrar_viajem()">
+        Relembrar viagem
+    </button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    var lista_viagens = []
+    function cadastrar_local() {
+        var lugares = input_lugares.values;
+        var pesquisa = Number(input_pesquisa.value);
+
+        lista_viagens.push(lugares);
+
+        if (pesquisa > lista_viagens.length) {
+            div_resultado.innerHTML = `
+            Você não fez ${lugares} viagem`
+
+        }else {
+            div_resultado.innerHTML = `
+            `
+        }
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+    Aluno: <input type="text" id="input_aluno">
+    <button onclick="cadastrar_aluno()">
+        Cadastrar aluno
+    </button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    var lista_aluno = []
+    function cadastrar_aluno() {
+        var aluno = input_aluno.value;
+
+        lista_aluno.push(aluno);
+
+        div_resultado.innerHTML = ""
+        for (var posicao = lista_aluno.length-1;
+             posicao >= 0;
+             posicao--) {
+                
+                div_resultado.innerHTML += `
+                ${lista_aluno[posicao]}<br>`
+
+             }
+    }
+</script>
