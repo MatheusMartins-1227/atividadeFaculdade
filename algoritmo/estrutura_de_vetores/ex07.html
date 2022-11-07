@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Alunos: <input type="text" id="input_aluno"><br>
+    <button onclick="cadastrar_aluno()">
+        Cadastrar aluno
+    </button>
+
+    <button onclick="pesquisar_aluno()">
+        Pesquisar aluno
+    </button>
+
+        <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    var lista_aluno = []
+    function cadastrar_aluno() {
+        var aluno = input_aluno.value;
+        lista_aluno.push(aluno);
+
+        for (var posicao;
+             posicao < lista_aluno.length;
+             posicao++) {
+                
+                div_resultado.innerHTML = `
+                ${lista_aluno.length}<br>
+                `
+
+             }
+    }
+
+    function pesquisar_aluno(){
+        if(aluno == lista_aluno.length-1){
+            div_resultado.innerHTML += ``
+        }
+    }
+</script>
