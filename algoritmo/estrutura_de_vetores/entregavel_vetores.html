@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Código do produto: <input type="text" id="input_codigo_produto"><br>
+    Nome do produto: <input type="text" id="input_nome_produto"> <br>
+    Quantidade em estoque: <input type="text" id="input_qtd_estoque"> <br>
+    <button onclick="salvar_produto()">
+        Salvar produto
+    </button>
+
+    <button onclick="ver_estoque()">
+        Ver estoque
+    </button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    const lista_produto = []
+    function salvar_produto() {
+
+        var produtoGeral = {
+            codigo_produto: input_codigo_produto.value,
+            nome_produto: input_nome_produto.value,
+            qtd_estoque: Number(input_qtd_estoque.value)
+        }
+
+        if(produtoGeral.codigo_produto == "") {
+            alert("Código inválido para o produto")
+        }
+
+        if(produtoGeral.nome_produto == "") {
+            alert("Nome inválido para o produto")
+        }
+
+        if(produtoGeral.qtd_estoque <= 0) {
+            alert("Quantidade inválida para o produto")
+        }
+
+        for (posicao = 0;
+             posicao == produtoGeral;
+             posicao++) {
+                
+             }
+
+    }
+</script>
